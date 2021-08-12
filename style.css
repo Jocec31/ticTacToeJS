@@ -1,0 +1,64 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+/* styles généraux */
+body {
+	height: 100vh;
+	background-color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	color: whitesmoke;
+}
+
+.wrap {
+	display: grid;
+	grid-template: repeat(3, 100px) / repeat(3, 100px);
+	width: 300px;
+	height: 300px;
+	margin: 2em auto;
+}
+
+button {
+	padding: 1em;
+	border: 0;
+	outline: 0;
+	display: none;
+	width: 200px;
+	margin: 1em auto;
+	border-radius: 5px;
+	transition: all 0.3s;
+}
+button:hover {
+	cursor: pointer;
+}
+button.active {
+	display: block;
+}
+h1,
+p {
+	text-align: center;
+	font-style: 2rem;
+	margin-top: 2em;
+}
+
+.cell {
+	width: 100px;
+	height: 100px;
+	border: 1px solid whitesmoke;
+	cursor: pointer;
+	font-size: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 400px) {
+	wrap {
+		width: 100%;
+		height: auto;
+	}
+}
